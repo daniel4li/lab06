@@ -4,7 +4,7 @@ class Apartment:
         "average" : 1,
         "excellent" : 2
     }
-    def __init__(self, rent = None, metersFromUCSB = None, condition = "N/A"):
+    def __init__(self, rent = 0, metersFromUCSB = 0, condition = "N/A"):
         self.rent = rent
         self.metersFromUCSB = metersFromUCSB
         self.condition = condition

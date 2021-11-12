@@ -39,7 +39,7 @@ def ensureSortedAscending(apartmentList):
 def getTopThreeApartments(apartmentList):
     mergesort(apartmentList)
     apartmentList = apartmentList[0:3]
-
+    
     m = ''
     for index, apartment in enumerate(apartmentList):
         m +=  apartment.getApartmentDetails()
@@ -52,12 +52,4 @@ def getNthApartment(apartmentList, n):
         return "(Apartment) DNE"
     return apartmentList[n].getApartmentDetails()
 
-a0 = Apartment(1200, 200, "average")
-a1 = Apartment(1200, 200, "excellent")
-a2 = Apartment(1000, 100, "average")
-a3 = Apartment(1000, 215, "excellent")
-a4 = Apartment(700, 315, "bad")
-a5 = Apartment(800, 250, "excellent")
 
-apartmentList = [a0, a1, a2, a3, a4, a5]
-print(getTopThreeApartments(apartmentList))
