@@ -16,6 +16,8 @@ def test_mergeSort():
     mergesort(apartmentList)
     assert (getNthApartment(apartmentList, 0)) == "(Apartment) Rent: $700, Distance From UCSB: 315m, Condition: bad"
     assert (getNthApartment(apartmentList, length-1)) == "(Apartment) Rent: $1200, Distance From UCSB: 200m, Condition: average"
+
+    
      
 """def test_topThree():
     a0 = Apartment(1200, 200, "average")

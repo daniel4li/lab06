@@ -28,18 +28,19 @@ class Apartment:
            if self.getMetersFromUCSB() == other.getMetersFromUCSB():
                if self.getCondition() in Apartment.quality.keys() and other.getCondition() in Apartment.quality.keys():
                    return Apartment.quality[self.getCondition()] > Apartment.quality[other.getCondition()]
-               return False
+               return False 
            else:
-               self.getMetersFromUCSB() < other.getMetersFromUCSB()
+               return self.getMetersFromUCSB() < other.getMetersFromUCSB()
        else:
            return self.getRent() < other.getRent() 
+       
 
 
     def __eq__(self, other):
         return (self.getRent() == other.getRent()) and (self.getCondition() == other.getCondition()) and (self.getMetersFromUCSB() == other.getMetersFromUCSB())
 
     def __gt__(self, other):
-       if self.__eq__(other) or self.__lt__(other):
+       if (self.__eq__(other) or self.__lt__(other)) :
            return False
        return True
            

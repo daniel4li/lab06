@@ -14,7 +14,7 @@ def mergesort(apartmentList):
         c= 0 
 
         while a <len(left) and b < len(right):
-            if left[a] < right[b] or left[a] == right[b] :
+            if left[a] < right[b] :
                 apartmentList[c] = left[a]
                 a = a + 1
             else:
@@ -32,7 +32,7 @@ def mergesort(apartmentList):
 
 def ensureSortedAscending(apartmentList):
     for i in range(len(apartmentList) - 1):
-        if apartmentList[i] > apartmentList[i + 1]:
+        if apartmentList[i] > apartmentList[i + 1] or apartmentList[i] == apartmentList [i + 1]:
             return False
     return True
 
@@ -51,5 +51,6 @@ def getNthApartment(apartmentList, n):
     if n > len(apartmentList) - 1:
         return "(Apartment) DNE"
     return apartmentList[n].getApartmentDetails()
+
 
 
